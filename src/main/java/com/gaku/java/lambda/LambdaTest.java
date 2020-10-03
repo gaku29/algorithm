@@ -43,9 +43,5 @@ public class LambdaTest {
         System.out.println("求和：" + Arrays.stream(objectArray).reduce(0, (x,y) -> x + y));
         System.out.println("求和：" + objectList.stream().reduce(0, (x,y) -> x + y));
 
-
-
-
-
     }
 }
