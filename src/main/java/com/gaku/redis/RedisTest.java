@@ -16,11 +16,11 @@ public class RedisTest {
         // try-with-resource  确保调用jedis.close()，将连接归还给pool
         // jedis本身不支持重试，如果需要重试，则需要自己写代码了（可以自己封装一下）
         try(Jedis jedis = pool.getResource()){
-//            testString(jedis);
+            testString(jedis);
 //            testHash(jedis);
 //            testList(jedis);
 //            testSet(jedis);
-            testZSet(jedis);
+//            testZSet(jedis);
 //            testPipe(jedis);
         }
     }
