@@ -2,14 +2,30 @@ package com.gaku;
 
 
 import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.Collectors.*;
+import java.util.regex.Pattern;
 
 public class Test {
 
     public static void main(String[] args) {
+
+
+
+
+
+        System.out.println(1e9+7);
+
+        List<String> abc = new ArrayList<>();
+        abc.add("aa");
+        abc.add("bb");
+        abc.add("aa");
+        List<String> def = new ArrayList<>();
+        def.add("aa");
+
+        abc.removeAll(def);
+
+
+        String[] d = abc.toArray(new String[0]);
+        System.out.println(Arrays.toString(d));
 
 
 

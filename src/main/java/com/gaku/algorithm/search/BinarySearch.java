@@ -7,9 +7,10 @@ public class BinarySearch {
 
     public static void main(String[] args) {
 
-        int[] a = {1,2,3,4,5,6,7,8,9,10};
+        int[] a = {1,2,3,4,5,6,9,11,19,40};
 
         System.out.println(binarySearch(a, 6));
+        System.out.println(binarySearch(a, 10));
     }
 
     private static int binarySearch(int[] a, int b){
@@ -17,7 +18,7 @@ public class BinarySearch {
             return -1;
         }
 
-        return binarySearch(a, b, 0, a.length - 1);
+        return binarySearchV2(a, b, 0, a.length - 1);
 
     }
 
@@ -36,6 +37,20 @@ public class BinarySearch {
             return binarySearch(a, b, mid + 1, high);
         }
 
+    }
+
+    private static int binarySearchV2(int[] a, int b , int low, int high){
+        while (low <= high){
+            int mid = (low + high);
+            if (a[mid] == b){
+                return mid;
+            }else if (a[mid] > b){
+                high = mid - 1;
+            }else {
+                low = mid + 1;
+            }
+        }
+        return -1;
     }
 
 

@@ -91,6 +91,7 @@ public class MaxLength {
 
 
 
+
             } else if (segmentList.size() >= 3) {
 
                 for(int x = 0; x <= segmentList.size() - 2; x++){
